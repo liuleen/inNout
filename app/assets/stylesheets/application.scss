@@ -1,0 +1,262 @@
+// @import "materialize";
+// @import "materialize/extras/nouislider";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background:  url(attendee_background5.jpg)no-repeat fixed;
+  background-size: auto;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.brand-logo{
+	left: 100px;
+}
+
+.profile_name{
+	margin-top: 2px;
+}
+.title{
+	color: #ce93d8;
+}
+.picture-hover:hover {
+  -webkit-filter: grayscale(100%);
+}
+.stats-attendee{
+	position: relative;
+	margin-top: -100px;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: auto;
+	width: auto;
+}
+.info{
+	position: relative;
+	margin-top: 21px;
+	height: 120px;
+	width: auto;
+	border: 1px solid #ce93d8;
+	border-radius: 10px;
+	background:  url(parallax1.jpg);
+	opacity: .4;
+}
+.destroy-close{
+	color: red;
+}
+.login-link{
+	font-size: 16px;
+}
+.info_text{
+	padding-bottom: 10px;
+}
+
+.location{
+	padding-top: 40px;
+	font-size: 30px;
+}
+.nav-block{
+	display: inline-block;
+}
+.info_profile{
+	display: inline-block;
+	padding: 5px;
+	font-size: 20px;
+
+}
+.block_info_text{
+	display: block;
+
+}
+#sign_in_title{
+	padding-left: 35px;
+}
+.sign_in_stamp{
+	padding-left: 5px;
+}
+.login{
+	position: relative;
+	top: 0px;
+	// opacity: 1;
+}
+.truncate{
+	display: block;
+	max-height: 685px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.truncate1{
+	display: block;
+	max-height: 1127px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.section{
+	position: relative;
+	top: 300px;
+	min-height: 500px;
+	opacity: .6;
+	background:  url(parallax1.jpg)
+}
+
+.parallax-container{
+	flex:  1 0 auto;
+}
+.attendee_card{
+	float: left;
+	min-width: auto;
+	min-height: auto;
+
+}
+.block-attendees-pages{
+	display: inline-block;
+	// padding-top: 10px
+
+}
+
+.new_attendee{
+	position: relative;
+	padding-right:   50;
+}
+
+.picture-index {
+	position: relative;
+	width: 256px;
+	height: 256px;
+	border-radius: 50%;
+	overflow: hidden;
+	// margin-top: 3px;
+	// margin-bottom: 5px;
+	// margin-left: 20px;
+}
+
+.picture-index img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 100%;
+	width: auto;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.table_stamp_profile{
+	margin-left:  20px;
+}
+.card_attedee{
+	min-height: 520px;
+	min-width: 350px;
+	background-image:  url(img_attendee);
+
+}
+// .time-stamps-index-sign-out{
+// 	display: inline;
+// }
+// .time-stamps-index-sign-out{
+// 	display: inline;
+// }
+.card-title-time{
+	background: url(img_attendee);
+}
+// .btn-action{
+// 	display: inline;
+// 	// padding: auto;
+// 	width: auto;
+//
+// }
+.card-action{
+	// position: relative;
+	// margin-top: -15px;
+	background: url(img_attendee);
+}
+.card-action-index{
+	// position: relative;
+	// margin-top: -15px;
+
+}
+
+.card-block{
+	display: block;
+
+}
+.container_info{
+	background: url(img_attendee);
+		width: auto; height: auto;
+		display: flex;
+	    border-style: solid;
+		border-radius: 15px;
+	    border-color: #ba68c8 ;
+
+}
+.time-stamps{
+	background-image:  url(parallax1.jpg);
+}
+
+.nav-wrapper{
+	background: linear-gradient(to right, #311b92 , #d32f2f, #0d47a1 );
+}
+
+.page-footer{
+	background: linear-gradient(to right, #311b92 , #d32f2f, #0d47a1 );
+}
+.table_stamp{
+	padding-left: 10px;
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #d32f2f ; /* Red */
+    color: white;
+    margin-bottom: 15px;
+	border-radius: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+.notice {
+    padding: 20px;
+    background-color: #303f9f; /* Red */
+    color: white;
+    margin-bottom: 15px;
+	border-radius: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}

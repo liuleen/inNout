@@ -1,0 +1,60 @@
+<div class=" white-text" id="notice">
+	<%= notice %>
+</div>
+
+<!-- <div class="row ">
+	<div class="col s12">
+		<div class="row">
+			<div class="input-field col s12 white">
+				<i class="material-icons prefix">textsms</i>
+				<input type="text" id="autocomplete-input" class="autocomplete" placeholder="search" data-url="<attendees_url" >
+				<label for="autocomplete-input "></label>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div class="paginate">
+	<div class="center block-attendees-pages" id="container_attendees">
+		<%= render @attendees %>
+	</div>
+	<div class="paginate center containerblock-attendees-pages ">
+		<%= paginate @attendees %>
+	</div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			Add New Attendee
+		</div>
+		<%= form_for(@attendee , remote: true) do |form| %>
+			<% if @attendee.errors.any? %>
+			<div id="error_explanation">
+				<h2>
+					<%= pluralize(@attendee.errors.count, "error") %> prohibited this attendee from being saved:
+				</h2>
+				<ul>
+					<% @attendee.errors.full_messages.each do |message| %>
+					<li>
+						<%= message %>
+					</li>
+					<% end %>
+				</ul>
+			</div>
+			<% end %>
+		<div class="modal-body">
+			<div class="input-field">
+				<%= form.text_field :login, class: 'attendee_login' %>
+				<%= form.label :login, class: 'active' %>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<div class="btn waves-effect waves-light  blue darken-2" >
+				<%= form.submit "Add Attendee", class: " white-text" %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>

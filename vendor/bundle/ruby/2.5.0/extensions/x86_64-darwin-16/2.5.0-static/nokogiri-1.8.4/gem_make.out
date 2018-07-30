@@ -1,0 +1,109 @@
+current directory: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri
+/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180717-93415-11hk3u7.rb extconf.rb
+checking if the C compiler accepts ... yes
+checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.3.0
+checking for iconv.h... yes
+checking for gzdopen() in -lz... yes
+checking for iconv... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.8
+with the following patches applied:
+	- 0001-Revert-Do-not-URI-escape-in-server-side-includes.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.8.tar.gz into tmp/x86_64-apple-darwin16.7.0/ports/libxml2/2.9.8... OK
+Running git apply with /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch... OK
+Running 'configure' for libxml2 2.9.8... OK
+Running 'compile' for libxml2 2.9.8... OK
+Running 'install' for libxml2 2.9.8... ERROR, review '/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext/nokogiri/tmp/x86_64-apple-darwin16.7.0/ports/libxml2/2.9.8/install.log' to see what happened. Last lines are:
+========================================================================
+/usr/bin/install -c -m 0644 ./tutorial/*.* \
+		/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/doc/libxml2-2.9.8/html/tutorial
+.././install-sh -c -d /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/doc/libxml2-2.9.8/html/tutorial/images
+/usr/bin/install -c -m 0644 ./tutorial/images/*.* \
+		/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/doc/libxml2-2.9.8/html/tutorial/images
+.././install-sh -c -d /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/doc/libxml2-2.9.8/html/tutorial/images/callouts
+/usr/bin/install -c -m 0644 ./tutorial/images/callouts/*.* \
+		/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/doc/libxml2-2.9.8/html/tutorial/images/callouts
+ .././install-sh -c -d '/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/man/man1'
+ /usr/bin/install -c -m 644 xmllint.1 xmlcatalog.1 '/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/man/man1'
+Making install in devhelp
+make[4]: Nothing to be done for `install-exec-am'.
+ ../.././install-sh -c -d '/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/gtk-doc/html/libxml2'
+ /usr/bin/install -c -m 644 libxml2.devhelp general.html index.html libxml2-c14n.html libxml2-catalog.html libxml2-chvalid.html libxml2-debugXML.html libxml2-dict.html libxml2-DOCBparser.html libxml2-encoding.html libxml2-entities.html libxml2-globals.html libxml2-hash.html libxml2-HTMLparser.html libxml2-HTMLtree.html libxml2-list.html libxml2-nanoftp.html libxml2-nanohttp.html libxml2-parser.html libxml2-parserInternals.html libxml2-pattern.html libxml2-relaxng.html libxml2-SAX2.html libxml2-SAX.html libxml2-schemasInternals.html libxml2-schematron.html libxml2-threads.html libxml2-tree.html libxml2-uri.html libxml2-valid.html libxml2-xinclude.html libxml2-xlink.html libxml2-xmlautomata.html libxml2-xmlerror.html libxml2-xmlexports.html libxml2-xmlIO.html libxml2-xmlmemory.html libxml2-xmlmodule.html libxml2-xmlreader.html libxml2-xmlregexp.html '/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/gtk-doc/html/libxml2'
+install: /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ports/x86_64-apple-darwin16.7.0/libxml2/2.9.8/share/gtk-doc/html/libxml2/libxml2.devhelp: No space left on device
+make[4]: *** [install-dist_devhelpDATA] Error 71
+make[3]: *** [install-am] Error 2
+make[2]: *** [install-recursive] Error 1
+make[1]: *** [install-recursive] Error 1
+make: *** [install] Error 2
+========================================================================
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/goinfre/versions/2.5.1/bin/$(RUBY_BASE_NAME)
+	--help
+	--clean
+	--use-system-libraries
+	--enable-static
+	--disable-static
+	--with-zlib-dir
+	--without-zlib-dir
+	--with-zlib-include
+	--without-zlib-include=${zlib-dir}/include
+	--with-zlib-lib
+	--without-zlib-lib=${zlib-dir}/lib
+	--enable-cross-build
+	--disable-cross-build
+/Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:402:in `block in execute': Failed to complete install task (RuntimeError)
+	from /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:373:in `chdir'
+	from /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:373:in `execute'
+	from /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:120:in `install'
+	from /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:155:in `cook'
+	from extconf.rb:365:in `block (2 levels) in process_recipe'
+	from extconf.rb:257:in `block in chdir_for_build'
+	from extconf.rb:256:in `chdir'
+	from extconf.rb:256:in `chdir_for_build'
+	from extconf.rb:364:in `block in process_recipe'
+	from extconf.rb:262:in `tap'
+	from extconf.rb:262:in `process_recipe'
+	from extconf.rb:551:in `<main>'
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/mbouanik/ru/vendor/bundle/ruby/2.5.0/extensions/x86_64-darwin-16/2.5.0-static/nokogiri-1.8.4/mkmf.log
+
+extconf failed, exit code 1

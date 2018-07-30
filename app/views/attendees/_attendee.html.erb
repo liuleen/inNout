@@ -1,0 +1,79 @@
+ <div class="attendee_card" id="attendee<%=attendee.id%>">
+	<div class="row">
+		<div class="col s1 m6">
+			<div class="card_attedee card small z-depth-3">
+				<span class=" right">
+					<%= link_to 'close', attendee, method: :delete,  remote: true, class: 'material-icons destroy-close'%>
+				</span>
+
+				<div class="container center picture-index picture-hover">
+					<%= link_to (image_tag  "https://cdn.intra.42.fr/users/medium_#{ attendee.login }.jpg",  class: 'picture-index'), attendee  %>
+				</div>
+				<div class="card-content white-text card-block">
+					<div class="card-title">
+						<%= attendee.name %>
+					</div>
+					<hr>
+					<%=link_to (attendee.login), attendee, class: "center login-link" %>
+					<% @time = Stamp.where(:attendee_id => attendee.id).last %>
+						<table class="white-text centered">
+							<thead class="container">
+								<tr>
+									<th class="time-stamps-index-sign-in" id="sign_in_title" >Sign in</th>
+									<th class="time-stamps-index-sign-out" >Sign out</th>
+									<th colspan="2"></th>
+								</tr>
+							</thead>
+							<% if @time %>
+							<td>
+								<div class="stamps  time-stamps-index-sign-in">
+									<span class="sign_in_stamp time-stamps-index-sign-in"><%= @time.sign_in.strftime "%B %e at %l:%M %p" unless @time.sign_in.nil? %></span>
+								</div>
+							</td>
+							<td>
+								<div class="stamps  time-stamps-index-sign-out" >
+									<span class='sign_out<%=@time.id%> time-stamps-index-sign-out'><%= @time.sign_out.strftime "%B %e at %l:%M %p" unless @time.sign_out.nil? %> <% if @time.sign_out.nil? %> <%= " No time logged yet" %> <% end %></span> <p></p>
+								</div>
+							</td>
+							<% else %>
+							<td>
+								<div class="stamps center">
+								<span class="sign_in_stam"><%= " No time logged yet" %></span>
+								</div>
+							</td>
+							<td>
+								<div class="stamps center">
+									<span class="right"><%= " No time logged yet" %></span>
+								</div>
+							</td>
+							<% end %>
+						</table>
+				</div>
+				<div class="card-action card-action-index ">
+					<div class="">
+						<a class="newwaves-effect waves-light btn modal-trigger purple lighten-2 btn-action" href="#modal-attendee<%=attendee.id%>">
+							History
+						</a>
+						<%= link_to 'Update Sign out', sign_out_path(id: @time), class: 'waves-effect waves-light btn  blue darken-2 btn-action', remote: true %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% @stamps = Stamp.where(:attendee_id => attendee.id).order("created_at DESC").page().per(10)%>
+	<div class="modal" id="modal-attendee<%=attendee.id%>" >
+		<div class="modal-dialog">
+			<div class="modal-content time-stamps">
+				<div class="modal-header white-text">
+					<div class="card-title">
+						<%= attendee.name%>'s History
+					</div>
+				</div>
+					<p class="white-text center" id="no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
+				<div class="modal-body" id="stamps" >
+					<%= render @stamps %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

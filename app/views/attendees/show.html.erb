@@ -1,0 +1,80 @@
+<div class="container_info  white-text">
+	<div class="picture-index left">
+		<%= image_tag  "https://cdn.intra.42.fr/users/medium_#{ @attendee.login }.jpg", class: 'picture-index'%>
+	</div>
+	<div class="container">
+		<div class="block_info_text profile_name">
+			<div class="info_profile" >
+				<%= @user_quest["displayname"] %> </div>  <div class="info_profile"> <%= @attendee.login %>
+			</div>
+		</div>
+		<div class="info z-depth-3 center">
+		</div>
+		<div class="block_info_text center">
+			<div class="stats-attendee center">
+				<div class="info_profile left">
+					<span class="title">
+						Grade
+					</span>
+					<div class="center">
+						<%= @user_quest["cursus_users"][0]["grade"] %>
+					</div>
+				</div>
+				<div class="info_profile center">
+					<span class="title">
+						Level
+					</span>
+					<div class="center">
+						<%= @user_quest["cursus_users"][0]["level"].truncate(4) %>
+					</div>
+				</div>
+				<div class="info_profile right">
+					<span class="title">
+						Correction points
+					</span>
+					<div class="center">
+						<%= @user_quest["correction_point"] %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="location center block_info_text">
+			<div class=" block_info_text">
+				<%= get_pos(@attendee.login) %>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<div class="" id="link" >
+	<%= link_to 'Add TimeStamp', sign_in_path(attendee_id: @attendee.id), class: 'waves-effect waves-light btn blue darken-2', remote: true %>
+	<!-- <%= link_to 'Back', attendees_path, class: 'waves-effect waves-light btn blue darken-2', onClick: "window.history.back()" %> -->
+</div>
+
+<div class="card z-depth-3 " >
+	<div class="card-title-time card-title white-text">
+			<table class=" white-text ">
+				<thead class="">
+					<tr>
+						<th class="center" id="sign_in_title" >Sign in</th>
+						<th class="center" >Sign out</th>
+						<th colspan="2"></th>
+					</tr>
+				</thead>
+			</table>
+	</div>
+
+	<div class="card-content love time-stamps" >
+		<p class="white-text center" id="no-time-logged"><% if !@stamps.present? %> <%= " No time logged yet" %> <% end %></p>
+
+		<div class="" id="sign_in">
+			<%= render @stamps %>
+		</div>
+	</div>
+</div>
+
+<div class="center">
+	<%= paginate @stamps %>
+</div>
+
+<br>

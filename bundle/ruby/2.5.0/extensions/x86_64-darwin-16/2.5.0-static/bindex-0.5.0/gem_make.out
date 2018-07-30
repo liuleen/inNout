@@ -1,0 +1,15 @@
+current directory: /Users/mbouanik/Documents/ru/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+/goinfre/versions/2.5.1/bin/ruby -r ./siteconf20180625-45097-1lgbhhs.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mbouanik/Documents/ru/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/mbouanik/Documents/ru/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/mbouanik/Documents/ru/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180625-45097-1x8wbdx/bindex
